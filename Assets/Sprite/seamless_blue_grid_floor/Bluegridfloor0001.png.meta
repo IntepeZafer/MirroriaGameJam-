@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bluegridfloor0001_0: 3581764889928140245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
