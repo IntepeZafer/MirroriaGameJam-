@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class MyGameManager : MonoBehaviour
 {
     public NormalCharacter normalCharacter;
     public InvertedCharacter invertedCharacter;

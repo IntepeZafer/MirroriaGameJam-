@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public ScoreManager scoreManager;
+    public int scoreToAdd = 100;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            Vector3 effectPosition = transform.position + Vector3.up * 1f;
+            scoreManager.ShowScoreEffect(effectPosition, scoreToAdd);
+        }
     }
 }

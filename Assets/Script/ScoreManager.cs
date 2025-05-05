@@ -1,25 +1,21 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;
-    public int score = 0;
-    public Text scoreText;
+    public GameObject explosionPrefab;
+    public TextMeshProUGUI totalScoreText;
+    private int totalScore = 0;
 
-    void Awake()
+    public void ShowScoreEffect(Vector3 worldPosition , int scoreAmount)
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
-    public void AddScore(int amount) 
-    {
-        score += amount;
-        UpdateScoreText();
-    }
-    void UpdateScoreText()
-    {
-        scoreText.text = "Score: " + score.ToString();
+        Instantiate(explosionPrefab, worldPosition, Quaternion.identity);
+        TextMeshProUGUI scoreText = Instantiate(totalScoreText, worldPosition, Quaternion.identity, transform);
+        scoreText.text = "+" + scoreAmount.ToString();
+        LeanTween.moveY(scoreText.gameObject, worldPosition.y + 2f, 1f).setEaseInOutQuad();
+        LeanTween.alphaText(scoreText.rectTransform, 0, 1f);
+        Destroy(scoreText.gameObject, 1f);
+        totalScore += scoreAmount;
+        totalScoreText.text = "Score: " + totalScore;
+        Debug.Log(worldPosition);
     }
 }
