@@ -1,21 +1,15 @@
 using UnityEngine;
-using TMPro;
+
 public class ScoreManager : MonoBehaviour
 {
-    public GameObject explosionPrefab;
-    public TextMeshProUGUI totalScoreText;
-    private int totalScore = 0;
+    public GameObject scoreIconPrefab;
+    public RectTransform playerScoreUI;
 
-    public void ShowScoreEffect(Vector3 worldPosition , int scoreAmount)
+    public void ShowMagnetScore(Vector3 worldPosition)
     {
-        Instantiate(explosionPrefab, worldPosition, Quaternion.identity);
-        TextMeshProUGUI scoreText = Instantiate(totalScoreText, worldPosition, Quaternion.identity, transform);
-        scoreText.text = "+" + scoreAmount.ToString();
-        LeanTween.moveY(scoreText.gameObject, worldPosition.y + 2f, 1f).setEaseInOutQuad();
-        LeanTween.alphaText(scoreText.rectTransform, 0, 1f);
-        Destroy(scoreText.gameObject, 1f);
-        totalScore += scoreAmount;
-        totalScoreText.text = "Score: " + totalScore;
-        Debug.Log(worldPosition);
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);
+        GameObject icon = Instantiate(scoreIconPrefab, screenPos, Quaternion.identity, GameObject.Find("ScoreTextCanvas").transform);
+        ScoreMagnetEffect effect = icon.GetComponent<ScoreMagnetEffect>();
+        effect.targetUI = playerScoreUI;
     }
 }
