@@ -26,6 +26,11 @@ public class SpawnManager : MonoBehaviour
                 int randomIndex = Random.Range(0, objectsToSpawn.Length);
                 GameObject spawnedObject = Instantiate(objectsToSpawn[randomIndex], spawnPoint.position, Quaternion.identity);
 
+                if(spawnPoint.position.y > 0)
+                {
+                    spawnedObject.transform.rotation = Quaternion.Euler(180f, 0f, 0f);
+                }
+
                 // Nesneye hareket scriptini ekle ve hýzýný ayarla
                 MoveObject moveScript = spawnedObject.AddComponent<MoveObject>();
                 moveScript.speed = moveSpeed;
