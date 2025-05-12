@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 762482974838097985}
   - component: {fileID: 6739754048756542369}
+  - component: {fileID: 2430757262274746576}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: EnemyObstacle
@@ -78,6 +79,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.49491447, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2430757262274746576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746839148203677505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a8708414c94054082649ef4182beb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stickerEffectPrefab: {fileID: 7334730031737790188, guid: 4531dfd78565739458c9c9d384ac6081, type: 3}
+  stickerSprites: []
+  effectParent: {fileID: 0}
+  scoreAmount: 10
+  sprites: []
 --- !u!1 &6992292116320917315
 GameObject:
   m_ObjectHideFlags: 0
