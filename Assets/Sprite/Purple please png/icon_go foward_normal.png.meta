@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_go foward_normal_0: -4059193282752851606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

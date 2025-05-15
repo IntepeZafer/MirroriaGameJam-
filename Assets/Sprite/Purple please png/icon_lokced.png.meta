@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_lokced_0: 1824799521181148317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

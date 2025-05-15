@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_low battery_0: -3043758910346928788
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

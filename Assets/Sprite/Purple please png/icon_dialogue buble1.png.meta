@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_dialogue buble1_0: -3804832688186718629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

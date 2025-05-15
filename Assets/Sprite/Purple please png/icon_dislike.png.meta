@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_dislike_0: -5040033145933099841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

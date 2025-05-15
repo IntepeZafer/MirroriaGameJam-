@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rect-Dark-Default@0.5x_0: -4473566231027601318
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

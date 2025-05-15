@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rect-Light-Hover@0.25x_0: 5481611345551561177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
