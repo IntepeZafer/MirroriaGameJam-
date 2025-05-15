@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1961332697032525241}
   - component: {fileID: 1252659283672451560}
-  - component: {fileID: 3512507813155652973}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -79,19 +78,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3512507813155652973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4617638080011689947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f427f519408f484ca9333a7c85c5008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreAdd: 10
 --- !u!1 &4854529835959602232
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +90,6 @@ GameObject:
   - component: {fileID: 4973985022506379282}
   - component: {fileID: -8292709618192259768}
   - component: {fileID: -4833068478688736748}
-  - component: {fileID: 1428397062238270795}
   m_Layer: 0
   m_Name: EnemyObject3
   m_TagString: Enemy
@@ -256,17 +241,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.8828125}
   m_EdgeRadius: 0
---- !u!114 &1428397062238270795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4854529835959602232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 134520b73d1d56e45b47a5547e02d015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wobbleScale: 0.1
-  wobbleSpeed: 0.5
