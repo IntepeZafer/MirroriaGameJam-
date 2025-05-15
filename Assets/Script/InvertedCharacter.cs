@@ -37,11 +37,11 @@ public class InvertedCharacter : MonoBehaviour
             jumpProgress = 0;
         }
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            FindAnyObjectByType<GameOverManager>().ShowGameOver();
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Enemy"))
+    //    {
+    //        FindAnyObjectByType<GameOverManager>().ShowGameOver();
+    //    }
+    //}
 }

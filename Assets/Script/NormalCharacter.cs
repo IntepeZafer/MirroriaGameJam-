@@ -38,11 +38,11 @@ public class NormalCharacter : MonoBehaviour
         }
     }
     
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            FindAnyObjectByType<GameOverManager>().ShowGameOver();
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Enemy"))
+    //    {
+    //        FindAnyObjectByType<GameOverManager>().ShowGameOver();
+    //    }
+    //}
 }
