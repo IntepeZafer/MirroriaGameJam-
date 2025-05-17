@@ -9,7 +9,9 @@ public class ObstacleTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+            effectSpawner.ShowEffect(screenPos, score);
+            Destroy(gameObject);
         }
     }           
 }
