@@ -4,7 +4,7 @@ public class ShowStickerEffect : MonoBehaviour
 {
     public GameObject stickerEffectPrefab;
     public Sprite[] stickerSprite;
-    public Transform canvasTransform; // 👈 EKLENDİ
+    public Transform canvasTransform;
 
     public void ShowEffect(Vector3 position, int score)
     {
