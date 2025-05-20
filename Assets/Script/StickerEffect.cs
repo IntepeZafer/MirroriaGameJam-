@@ -13,7 +13,7 @@ public class StickerEffect : MonoBehaviour
     public void Setup(Sprite sprite ,int score)
     {
         stickerImage.sprite = sprite;
-        scoreText.text = $"+{score}";
+        scoreText.text = $"+ {score}";
         StartCoroutine(AnimateSticker());
     }
     private IEnumerator AnimateSticker() 
@@ -41,6 +41,7 @@ public class StickerEffect : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
+
     private Color GetRandomNonBlackColor()
     {
         Color color;

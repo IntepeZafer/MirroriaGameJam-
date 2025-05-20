@@ -7,8 +7,6 @@ public class ScoreManager : MonoBehaviour
     public TMP_Text scoreText;
     private int score = 0;
 
-    public static object Instance { get; internal set; }
-
     private void Awake()
     {
         instance = this;
