@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Character3F_1_pickup_wall_6_0: 2404334220902875034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

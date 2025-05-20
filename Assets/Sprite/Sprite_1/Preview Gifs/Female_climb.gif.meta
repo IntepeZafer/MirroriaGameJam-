@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Female_climb_0: 2422768543054025801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

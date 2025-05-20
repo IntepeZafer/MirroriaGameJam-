@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Character3F_3_climb_9_0: -4769181279604115578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

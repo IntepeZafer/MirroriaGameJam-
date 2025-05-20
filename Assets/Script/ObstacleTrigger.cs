@@ -13,5 +13,5 @@ public class ObstacleTrigger : MonoBehaviour
             effectSpawner.ShowEffect(screenPos, score);
             Destroy(gameObject);
         }
-    }           
+    }
 }
