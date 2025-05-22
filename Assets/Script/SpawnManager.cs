@@ -7,20 +7,17 @@ public class SpawnManager : MonoBehaviour
     public float minSpawnInterval;
     public float maxSpawnInterval;
     public float objectLifetime;
-    public float moveSpeed; // Nesnelerin kayma hýzý
-
+    public float moveSpeed;
     private void Start()
     {
         StartCoroutine(SpawnObjects());
     }
-
     IEnumerator SpawnObjects()
     {
         while (true)
         {
             float randomTime = Random.Range(minSpawnInterval, maxSpawnInterval);
             yield return new WaitForSeconds(randomTime);
-
             if (objectsToSpawn.Length > 0)
             {
                 int randomIndex = Random.Range(0, objectsToSpawn.Length);
@@ -30,12 +27,8 @@ public class SpawnManager : MonoBehaviour
                 {
                     spawnedObject.transform.rotation = Quaternion.Euler(180f, 0f, 0f);
                 }
-
-                // Nesneye hareket scriptini ekle ve hýzýný ayarla
                 MoveObject moveScript = spawnedObject.AddComponent<MoveObject>();
                 moveScript.speed = moveSpeed;
-
-                // Belirtilen süre sonra yok et
                 Destroy(spawnedObject, objectLifetime);
             }
         }

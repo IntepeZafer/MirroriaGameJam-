@@ -14,6 +14,7 @@ public class StickerEffect : MonoBehaviour
     {
         stickerImage.sprite = sprite;
         scoreText.text = $"+ {score}";
+        transform.localScale = Vector3.zero;
         StartCoroutine(AnimateSticker());
     }
     private IEnumerator AnimateSticker() 
@@ -21,12 +22,23 @@ public class StickerEffect : MonoBehaviour
         stickerImage.color = new Color(1, 1, 1, 0);
         scoreText.color = new Color(1, 1, 1, 0);
         transform.localScale = Vector3.zero;
+        float duration = 0.5f;
+        float elapsed = 0f;
+        Vector3 startScale = Vector3.zero;
+        Vector3 endScale = Vector3.one;
 
         Color randomColor = GetRandomNonBlackColor();
         stickerImage.color = randomColor;
         float time = 0;
 
-        while(time  < fadeDuration)
+        while(elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            transform.localScale = Vector3.LerpUnclamped(startScale, endScale, Mathf.Sin(t * Mathf.PI * 0.5f));
+        }
+        transform.localScale = endScale;
+        while (time  < fadeDuration)
         {
             float t = time / fadeDuration;
             stickerImage.color = new Color(randomColor.r, randomColor.g, randomColor.b, t);
