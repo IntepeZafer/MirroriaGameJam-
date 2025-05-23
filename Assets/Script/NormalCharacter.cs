@@ -8,11 +8,13 @@ public class NormalCharacter : MonoBehaviour
     public bool isJumping;
     public float jumpProgress;
     private Rigidbody2D Rb;
+    private Animator normalCharacterAnimator;
 
     private void Start()
     {
         startPos = transform.position;
         Rb = GetComponent<Rigidbody2D>();
+        normalCharacterAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -37,12 +39,4 @@ public class NormalCharacter : MonoBehaviour
             jumpProgress = 0;
         }
     }
-    
-    //void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.CompareTag("Enemy"))
-    //    {
-    //        FindAnyObjectByType<GameOverManager>().ShowGameOver();
-    //    }
-    //}
 }

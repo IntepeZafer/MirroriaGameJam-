@@ -8,6 +8,8 @@ public class StickerEffect : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public float fadeDuration = 0.5f;
     public float scaleDuration = 0.5f;
+    public AudioClip[] popSounds;
+    private AudioSource audioSource;
 
 
     public void Setup(Sprite sprite ,int score)
@@ -16,6 +18,16 @@ public class StickerEffect : MonoBehaviour
         scoreText.text = $"+ {score}";
         transform.localScale = Vector3.zero;
         StartCoroutine(AnimateSticker());
+    }
+    private void Awake()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        if(popSounds.Length > 0)
+        {
+
+            int index = Random.Range(0, popSounds.Length);
+            audioSource.PlayOneShot(popSounds[index]);
+        }
     }
     private IEnumerator AnimateSticker() 
     {
