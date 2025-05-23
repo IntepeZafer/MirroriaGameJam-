@@ -2,26 +2,29 @@ using UnityEngine;
 
 public class CharacterJump : MonoBehaviour
 {
-    public Animator animator;
-    public Rigidbody2D rb;
-    public float jumpForce = 5f;
-    private bool isGrounded = true;
+    private Animator animator;
+    private Rigidbody2D rb;
+    public AudioClip jumpSound;
+    private AudioSource audioSource;
 
-    void Update()
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && isGrounded)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            animator.SetTrigger("JumpWoman");
-            isGrounded = false;
-        }
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (Input.GetMouseButtonDown(0) && Mathf.Abs(rb.linearVelocity.y) < 0.01f)
         {
-            isGrounded = true;
+            animator.ResetTrigger("isJumping");
+            animator.SetTrigger("isJumping");
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 7f);
+            if(jumpSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(jumpSound);
+            }
         }
     }
 }
